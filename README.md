@@ -7,3 +7,5 @@ the webserver in this git repository is added as a submodule because it is a her
 > `git clone --recursive https://github.com/LennertPurnal/IoT_Project_MolenaersPurnal.git`
 - if you already clone as usual, add the submodule with the following command:
 > `git submodule update --init`
+To pull all changes on all submodules at once, use the following command:
+> `git pull --recurse-submodules`
