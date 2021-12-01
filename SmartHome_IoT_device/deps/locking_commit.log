@@ -1,0 +1,16 @@
+abstraction-rtos release-v1.5.0
+aws-iot-device-sdk-port release-v2.0.0
+capsense release-v2.10.0
+clib-support release-v1.1.0
+connectivity-utilities release-v3.0.3
+core-lib release-v1.3.0
+core-make release-v1.9.0
+freertos release-v10.4.3
+mtb-hal-cat1 release-v1.6.0
+mtb-pdl-cat1 release-v2.3.1
+psoc6cm0p release-v2.1.4
+recipe-make-cat1a release-v1.9.0
+secure-sockets release-v2.3.0
+whd-bsp-integration release-v2.0.0
+wifi-host-driver release-v2.0.0
+wifi-mw-core release-v3.1.1
