@@ -12,6 +12,7 @@ C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/libs/TARGET_CY8CPROTO-062-4343W/bluetooth/cybsp_bt_config.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/libs/TARGET_CY8CPROTO-062-4343W/cybsp.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/heap_usage.o
+C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/http_methods.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/main.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/mqtt_client_config.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/mqtt_task.o
@@ -22,6 +23,8 @@ C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/abstraction-rtos/release-v1.5.0/source/COMPONENT_FREERTOS/cyabs_rtos_freertos.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/abstraction-rtos/release-v1.5.0/source/cy_worker_thread.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/backoffAlgorithm/source/backoff_algorithm.o
+C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/core_http_client.o
+C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/dependency/3rdparty/http_parser/http_parser.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreJSON/source/core_json.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/core_mqtt.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/core_mqtt_serializer.o
@@ -66,6 +69,7 @@ C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/freertos/release-v10.4.3/Source/stream_buffer.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/freertos/release-v10.4.3/Source/tasks.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/freertos/release-v10.4.3/Source/timers.o
+C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/http-client/release-v1.1.1/source/cy_http_client_api.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/api/api_lib.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/api/api_msg.o
 C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/api/err.o

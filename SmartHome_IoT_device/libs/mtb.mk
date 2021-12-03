@@ -6,6 +6,7 @@
 SEARCH_TARGET_CY8CPROTO-062-4343W=./libs/TARGET_CY8CPROTO-062-4343W
 
 # List of shared libraries 
+SEARCH_http-client=../mtb_shared/http-client/release-v1.1.1
 SEARCH_mqtt=../mtb_shared/mqtt/release-v3.2.0
 SEARCH_retarget-io=../mtb_shared/retarget-io/release-v1.3.0
 SEARCH_wifi-connection-manager=../mtb_shared/wifi-connection-manager/release-v2.0.4
@@ -30,6 +31,7 @@ SEARCH_wifi-host-driver=../mtb_shared/wifi-host-driver/release-v2.0.0
 SEARCH_wifi-mw-core=../mtb_shared/wifi-mw-core/release-v3.1.1
 
 # Shared libraries added to build 
+SEARCH+=$(SEARCH_http-client)
 SEARCH+=$(SEARCH_mqtt)
 SEARCH+=$(SEARCH_retarget-io)
 SEARCH+=$(SEARCH_wifi-connection-manager)

@@ -67,7 +67,7 @@
 /********************* MQTT MESSAGE CONFIGURATION MACROS **********************/
 /* The MQTT topics to be used by the publisher and subscriber. */
 #define MQTT_PUB_TOPIC_BTN                "ledstatus"	//topic for button press
-#define MQTT_PUB_TOPIC_TEMP				  "test/topic1" //topic for temperature sending
+#define MQTT_PUB_TOPIC_TEMP				  "temperaturedata" //topic for temperature sending
 #define MQTT_SUB_TOPIC                    "ledstatus"
 
 /* Set the QoS that is associated with the MQTT publish, and subscribe messages.

@@ -59,6 +59,8 @@
 #include "cy_mqtt_api.h"
 #include "cy_retarget_io.h"
 
+#include "http_methods.h"
+
 #include <time.h>
 
 /******************************************************************************
@@ -313,15 +315,15 @@ void send_temp_task(void *pvParameters){
 
 
 		uint32_t timestamp = (uint32_t)time(NULL);
+		printf("before");
+		uint32_t time = get_unix_timestamp();
+		printf("after");
 
 		sprintf(jsonstring ,"{\"device_id\":%d ,\"temperature\":%f ,\"timestamp\":%lu}" ,device_id ,temperature ,timestamp);
 		publisher_q_data.data = jsonstring;
 
 		xQueueSend(publisher_task_q, &publisher_q_data, xQueueDelay);
 	}
-
-
-
 }
 
 /* [] END OF FILE */
