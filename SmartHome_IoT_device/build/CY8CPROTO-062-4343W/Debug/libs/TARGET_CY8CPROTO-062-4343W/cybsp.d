@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/libs/TARGET_CY8CPROTO-062-4343W/cybsp.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/libs/TARGET_CY8CPROTO-062-4343W/cybsp.o: \
  libs/TARGET_CY8CPROTO-062-4343W/cybsp.c \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h \

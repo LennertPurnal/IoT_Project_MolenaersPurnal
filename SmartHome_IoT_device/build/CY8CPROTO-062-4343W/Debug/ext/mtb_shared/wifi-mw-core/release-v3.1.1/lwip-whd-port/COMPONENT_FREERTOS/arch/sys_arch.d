@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-mw-core/release-v3.1.1/lwip-whd-port/COMPONENT_FREERTOS/arch/sys_arch.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-mw-core/release-v3.1.1/lwip-whd-port/COMPONENT_FREERTOS/arch/sys_arch.o: \
  ../mtb_shared/wifi-mw-core/release-v3.1.1/lwip-whd-port/COMPONENT_FREERTOS/arch/sys_arch.c \
  ../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/include/lwip/debug.h \
  ../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/include/lwip/arch.h \

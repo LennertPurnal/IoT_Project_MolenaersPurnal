@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/api/api_lib.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/api/api_lib.o: \
  ../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/api/api_lib.c \
  ../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/include/lwip/opt.h \
  ../mtb_shared/wifi-mw-core/release-v3.1.1/configs/lwipopts.h \

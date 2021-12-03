@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/whd_network_if.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/whd_network_if.o: \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/whd_network_if.c \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/include/whd_debug.h \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/inc/whd.h \

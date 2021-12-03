@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.o: \
  ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.c \
  ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h \
  ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \

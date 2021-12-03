@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/bus_protocols/whd_bus_common.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/bus_protocols/whd_bus_common.o: \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/bus_protocols/whd_bus_common.c \
  ../mtb_shared/abstraction-rtos/release-v1.5.0/include/cyabs_rtos.h \
  ../mtb_shared/abstraction-rtos/release-v1.5.0/include/COMPONENT_FREERTOS/cyabs_rtos_impl.h \

@@ -30,6 +30,6 @@
 #if !defined(CYCFG_NOTICES_H)
 #define CYCFG_NOTICES_H
 
-#warning "(Library) The referenced 'device support library' contains newer content than is supported. Either downgrade the version of the 'device support library' referenced or upgrade the version of tools being used. Current library: C:/devWorks/IoT/IoT_project/mtb_shared/mtb-pdl-cat1/release-v2.3.1 Current tools: C:/Infineon/Tools/ModusToolbox/tools_2.3"
+#warning "(Library) The referenced 'device support library' contains newer content than is supported. Either downgrade the version of the 'device support library' referenced or upgrade the version of tools being used. Current library: C:/IOT/IoT_Project_MolenaersPurnal/mtb_shared/mtb-pdl-cat1/release-v2.3.1 Current tools: C:/Infineon/Tools/ModusToolbox/tools_2.3"
 
 #endif /* CYCFG_NOTICES_H */

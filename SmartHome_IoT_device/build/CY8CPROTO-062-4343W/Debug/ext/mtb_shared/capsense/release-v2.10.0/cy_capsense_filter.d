@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/capsense/release-v2.10.0/cy_capsense_filter.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/capsense/release-v2.10.0/cy_capsense_filter.o: \
  ../mtb_shared/capsense/release-v2.10.0/cy_capsense_filter.c \
  ../mtb_shared/capsense/release-v2.10.0/cy_capsense_filter.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h \

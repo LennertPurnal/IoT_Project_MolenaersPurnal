@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/freertos/release-v10.4.3/Source/event_groups.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/freertos/release-v10.4.3/Source/event_groups.o: \
  ../mtb_shared/freertos/release-v10.4.3/Source/event_groups.c \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h \
  configs/FreeRTOSConfig.h \

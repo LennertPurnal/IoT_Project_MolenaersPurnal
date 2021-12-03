@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/connectivity-utilities/release-v3.0.3/network/COMPONENT_LWIP/cy_nw_helper.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/connectivity-utilities/release-v3.0.3/network/COMPONENT_LWIP/cy_nw_helper.o: \
  ../mtb_shared/connectivity-utilities/release-v3.0.3/network/COMPONENT_LWIP/cy_nw_helper.c \
  ../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/include/lwip/dhcp.h \
  ../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/include/lwip/opt.h \

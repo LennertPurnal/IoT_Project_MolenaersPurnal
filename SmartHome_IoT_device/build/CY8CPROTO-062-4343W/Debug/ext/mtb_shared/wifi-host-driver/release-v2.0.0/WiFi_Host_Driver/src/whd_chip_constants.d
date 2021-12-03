@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/whd_chip_constants.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/whd_chip_constants.o: \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/whd_chip_constants.c \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/src/include/whd_chip_constants.h \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/inc/whd.h \

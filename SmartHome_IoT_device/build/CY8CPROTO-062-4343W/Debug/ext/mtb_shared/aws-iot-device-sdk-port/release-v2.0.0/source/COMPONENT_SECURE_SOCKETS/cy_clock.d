@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-port/release-v2.0.0/source/COMPONENT_SECURE_SOCKETS/cy_clock.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/aws-iot-device-sdk-port/release-v2.0.0/source/COMPONENT_SECURE_SOCKETS/cy_clock.o: \
  ../mtb_shared/aws-iot-device-sdk-port/release-v2.0.0/source/COMPONENT_SECURE_SOCKETS/cy_clock.c \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/platform/include/clock.h \
  ../mtb_shared/abstraction-rtos/release-v1.5.0/include/cyabs_rtos.h \

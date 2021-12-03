@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/secure-sockets/release-v2.3.0/source/COMPONENT_LWIP/cy_secure_sockets.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/secure-sockets/release-v2.3.0/source/COMPONENT_LWIP/cy_secure_sockets.o: \
  ../mtb_shared/secure-sockets/release-v2.3.0/source/COMPONENT_LWIP/cy_secure_sockets.c \
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets.h \
  ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \

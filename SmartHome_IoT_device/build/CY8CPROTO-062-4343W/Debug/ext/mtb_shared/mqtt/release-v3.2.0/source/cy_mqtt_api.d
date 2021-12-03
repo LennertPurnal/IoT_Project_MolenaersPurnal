@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/mqtt/release-v3.2.0/source/cy_mqtt_api.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/mqtt/release-v3.2.0/source/cy_mqtt_api.o: \
  ../mtb_shared/mqtt/release-v3.2.0/source/cy_mqtt_api.c \
  ../mtb_shared/mqtt/release-v3.2.0/include/cy_mqtt_api.h \
  ../mtb_shared/connectivity-utilities/release-v3.0.3/cy_result_mw.h \

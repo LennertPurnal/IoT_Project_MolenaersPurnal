@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/source/triggers/cyhal_triggers_psoc6_02.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/source/triggers/cyhal_triggers_psoc6_02.o: \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/source/triggers/cyhal_triggers_psoc6_02.c \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device_headers.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy8c624abzi_s2d44.h \

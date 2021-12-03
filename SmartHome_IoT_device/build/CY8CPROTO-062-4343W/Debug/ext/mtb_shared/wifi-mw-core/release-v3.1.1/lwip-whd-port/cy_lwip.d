@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-mw-core/release-v3.1.1/lwip-whd-port/cy_lwip.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/wifi-mw-core/release-v3.1.1/lwip-whd-port/cy_lwip.o: \
  ../mtb_shared/wifi-mw-core/release-v3.1.1/lwip-whd-port/cy_lwip.c \
  ../mtb_shared/wifi-mw-core/release-v3.1.1/configs/lwipopts.h \
  ../mtb_shared/wifi-host-driver/release-v2.0.0/WiFi_Host_Driver/inc/whd_types.h \

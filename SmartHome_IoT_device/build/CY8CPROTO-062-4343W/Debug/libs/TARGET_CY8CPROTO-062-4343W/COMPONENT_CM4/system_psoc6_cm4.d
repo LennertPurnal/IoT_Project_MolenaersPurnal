@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_CM4/system_psoc6_cm4.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_CM4/system_psoc6_cm4.o: \
  libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_CM4/system_psoc6_cm4.c \
  libs/TARGET_CY8CPROTO-062-4343W/system_psoc6.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h \

@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/whd-bsp-integration/release-v2.0.0/cybsp_wifi.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/whd-bsp-integration/release-v2.0.0/cybsp_wifi.o: \
  ../mtb_shared/whd-bsp-integration/release-v2.0.0/cybsp_wifi.c \
  libs/TARGET_CY8CPROTO-062-4343W/cybsp.h \
  ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \
