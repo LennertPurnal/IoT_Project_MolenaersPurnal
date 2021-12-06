@@ -303,6 +303,7 @@ void send_temp_task(void *pvParameters){
 	const TickType_t xQueueDelay = 1000/portTICK_PERIOD_MS;
 	const TickType_t xDelay = 10000/portTICK_PERIOD_MS; //set delay to 10 seconds
 
+	uint32_t last_unix_time = 0, last_get_time = 0, time_since_update = 0, timestamp = 0;
 	int device_id = 1;
 	char *jsonstring = (char*)malloc(80*sizeof(char));
 	srand(time(0));
@@ -313,11 +314,14 @@ void send_temp_task(void *pvParameters){
 		vTaskDelay(xDelay);
 		float temperature = rand() % (25-22) + 21; //random number for temp for testing purposes
 
-
-		uint32_t timestamp = (uint32_t)time(NULL);
-		printf("before");
-		uint32_t time = get_unix_timestamp();
-		printf("after");
+		// synchronize with unix time from internet on start or if time since last update is more than 5 minutes
+		while ((last_unix_time == 0) || (time_since_update > 300)){
+			last_unix_time = get_unix_timestamp();
+			last_get_time = time(NULL);
+			time_since_update = 0;
+		}
+		time_since_update = time(NULL) - last_get_time;
+		timestamp = last_unix_time + time_since_update;
 
 		sprintf(jsonstring ,"{\"device_id\":%d ,\"temperature\":%f ,\"timestamp\":%lu}" ,device_id ,temperature ,timestamp);
 		publisher_q_data.data = jsonstring;

@@ -150,12 +150,24 @@ uint32_t get_unix_timestamp(){
 		}
 	}
 
+	/*
 	for(int i = 0; i < response.body_len; i++){
 		printf("%c", response.body[i]);
 	}
-	printf("\r\n");
+	*/
+	char response_string[response.body_len-2];
+	for(int i = 1; i < response.body_len-1; i++){
+			//printf("%c", response.body[i]);
+			response_string[i-1] = response.body[i]; //copy the characters to a string
+	}
+	response_string[response.body_len-1] = '\0';
+	//printf("%s", response_string);
+	//printf("\r\n");
 
-	return 0;
+	uint32_t response_int = (uint32_t) strtol(response_string, (char **)NULL, 10);
+	printf("GET unix timestamp returned %lu \r\n", response_int);
+
+	return response_int;
 }
 
 void disconnect_callback(void *arg){
