@@ -227,7 +227,7 @@ void mqtt_client_task(void *pvParameters)
     }
 
     // create the task for sending the temperature data
-    if (pdPASS != xTaskCreate(send_temp_task, "temperature send task", PUBLISHER_TASK_STACK_SIZE,
+    if (pdPASS != xTaskCreate(send_temp_task, "temperature send task", (5 * 1024),
     						NULL, 3, &send_temp_task_handle))
     {
     	printf("Failed to create the temperature sending task");

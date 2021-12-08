@@ -49,10 +49,19 @@
 * Macros
 ********************************************************************************/
 /* SSID of the Wi-Fi Access Point to which the MQTT client connects. */
+<<<<<<< HEAD
 #define WIFI_SSID                         "ARNO"
 
 /* Passkey of the above mentioned Wi-Fi SSID. */
 #define WIFI_PASSWORD                     "wachtwoord"
+=======
+#define WIFI_SSID                         "Purnal 2.4GHz"
+//#define WIFI_SSID							"ONEPLUS_len"
+
+/* Passkey of the above mentioned Wi-Fi SSID. */
+#define WIFI_PASSWORD                     "whbd3ux9e7e9n"
+//#define WIFI_PASSWORD						"len123ert"
+>>>>>>> 53d5f5573500abd8090f3c641dc5d5674eb08ea6
 
 /* Security type of the Wi-Fi access point. See 'cy_wcm_security_t' structure
  * in "cy_wcm.h" for more details.

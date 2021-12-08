@@ -256,10 +256,9 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/connectivity-utilities/release-v3.0.3/network/cy_nw_helper.h \
  ../mtb_shared/connectivity-utilities/release-v3.0.3/cy_log/cy_log.h \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt.h \
- configs/core_mqtt_config.h \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt_config_defaults.h \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt_serializer.h \
- ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/interface/transport_interface.h \
+ ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/interface/transport_interface.h \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt_state.h \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt.h \
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/platform/include/clock.h \
@@ -270,7 +269,8 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets_constants.h \
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_tls.h \
  source/subscriber_task.h configs/mqtt_client_config.h \
- ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h
+ ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h \
+ source/http_methods.h
 
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h:
 
@@ -784,13 +784,11 @@ source/mqtt_task.h:
 
 ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt.h:
 
-configs/core_mqtt_config.h:
-
 ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt_config_defaults.h:
 
 ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt_serializer.h:
 
-../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/interface/transport_interface.h:
+../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/interface/transport_interface.h:
 
 ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreMQTT/source/include/core_mqtt_state.h:
 
@@ -815,3 +813,5 @@ source/subscriber_task.h:
 configs/mqtt_client_config.h:
 
 ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h:
+
+source/http_methods.h:

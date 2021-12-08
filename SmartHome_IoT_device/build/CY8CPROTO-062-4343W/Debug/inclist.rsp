@@ -17,6 +17,13 @@
 -I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/backoffAlgorithm
 -I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/backoffAlgorithm/source
 -I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/backoffAlgorithm/source/include
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/dependency
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/dependency/3rdparty
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/dependency/3rdparty/http_parser
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/include
+-I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/interface
 -I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreJSON
 -I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreJSON/source
 -I../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreJSON/source/include
@@ -54,6 +61,8 @@
 -I../mtb_shared/freertos/release-v10.4.3/Source/portable
 -I../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4
 -I../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
+-I../mtb_shared/http-client/release-v1.1.1
+-I../mtb_shared/http-client/release-v1.1.1/include
 -I../mtb_shared/lwip/STABLE-2_1_2_RELEASE
 -I../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src
 -I../mtb_shared/lwip/STABLE-2_1_2_RELEASE/src/include
