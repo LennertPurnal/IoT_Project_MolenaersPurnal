@@ -1,9 +1,5 @@
 C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/http_methods.o: \
  source/http_methods.c \
- ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h \
- ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h \
- ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \
- ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_cpuss.h \
@@ -75,6 +71,7 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device_headers.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h \
  ../mtb_shared/core-lib/release-v1.3.0/include/cy_utils.h \
+ ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysint.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_core.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_core_aes.h \
@@ -169,6 +166,9 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_trigmux.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_usbfs_dev_drv_reg.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_wdt.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_resources.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pin_package.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/pin_packages/cyhal_psoc6_02_124_bga.h \
@@ -263,14 +263,6 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/aws-iot-device-sdk-embedded-C/202103.00/libraries/standard/coreHTTP/source/interface/transport_interface.h \
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_tls.h \
  source/http_methods.h
-
-../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h:
-
-../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h:
-
-../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h:
-
-../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h:
 
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h:
 
@@ -413,6 +405,8 @@ libs/TARGET_CY8CPROTO-062-4343W/system_psoc6.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h:
 
 ../mtb_shared/core-lib/release-v1.3.0/include/cy_utils.h:
+
+../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h:
 
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysint.h:
 
@@ -601,6 +595,12 @@ libs/TARGET_CY8CPROTO-062-4343W/system_psoc6.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_usbfs_dev_drv_reg.h:
 
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_wdt.h:
+
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h:
+
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h:
+
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h:
 
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_resources.h:
 
