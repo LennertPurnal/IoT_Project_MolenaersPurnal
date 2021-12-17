@@ -306,7 +306,7 @@ void send_temp_task(void *pvParameters){
 	const TickType_t xDelay = 10000/portTICK_PERIOD_MS; //set delay to 10 seconds
 
 	uint32_t last_unix_time = 0, last_get_time = 0, time_since_update = 0, timestamp = 0;
-	int device_id = 1;
+	int device_id = 2;
 	char *jsonstring = (char*)malloc(80*sizeof(char));
 	srand(time(0));
 
