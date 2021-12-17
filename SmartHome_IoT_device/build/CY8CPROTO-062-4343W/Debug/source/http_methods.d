@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/http_methods.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/http_methods.o: \
  source/http_methods.c \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h \

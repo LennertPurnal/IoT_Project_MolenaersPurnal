@@ -21,7 +21,6 @@
 /* HTTP Client Library*/
 // TODO: #include the http_client library api header file
 #include "cy_http_client_api.h"
-
 #include "http_methods.h"
 
 void disconnect_callback(void *arg);

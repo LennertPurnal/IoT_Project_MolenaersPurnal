@@ -1,4 +1,4 @@
-C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/http-client/release-v1.1.1/source/cy_http_client_api.o: \
+C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/ext/mtb_shared/http-client/release-v1.1.1/source/cy_http_client_api.o: \
  ../mtb_shared/http-client/release-v1.1.1/source/cy_http_client_api.c \
  ../mtb_shared/abstraction-rtos/release-v1.5.0/include/cyabs_rtos.h \
  ../mtb_shared/abstraction-rtos/release-v1.5.0/include/COMPONENT_FREERTOS/cyabs_rtos_impl.h \
