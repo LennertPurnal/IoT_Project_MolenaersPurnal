@@ -223,8 +223,8 @@ static void publisher_init(void)
     cyhal_gpio_enable_event(CYBSP_USER_BTN, CYHAL_GPIO_IRQ_FALL,
                             USER_BTN_INTR_PRIORITY, true);
     
-    printf("Press the user button (SW2) to publish \"%s\"/\"%s\" on the topic '%s'...\n\n", 
-           MQTT_DEVICE_ON_MESSAGE, MQTT_DEVICE_OFF_MESSAGE, publish_info.topic);
+    //printf("Press the user button (SW2) to publish \"%s\"/\"%s\" on the topic '%s'...\n\n",
+    //       MQTT_DEVICE_ON_MESSAGE, MQTT_DEVICE_OFF_MESSAGE, publish_info.topic);
 }
 
 /******************************************************************************
@@ -267,6 +267,7 @@ static void publisher_deinit(void)
  *  void
  *
  ******************************************************************************/
+
 static void isr_button_press(void *callback_arg, cyhal_gpio_event_t event)
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
@@ -296,6 +297,7 @@ static void isr_button_press(void *callback_arg, cyhal_gpio_event_t event)
     xQueueSendFromISR(publisher_task_q, &publisher_q_data, &xHigherPriorityTaskWoken);
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
+
 
 void send_temp_task(void *pvParameters){
 	publisher_data_t publisher_q_data;
