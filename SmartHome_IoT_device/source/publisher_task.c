@@ -376,6 +376,7 @@ void send_temp_task(void *pvParameters){
 	int device_id = 2;
 	char *jsonstring = (char*)malloc(80*sizeof(char));
 	srand(time(0));
+	adc_single_channel_init();
 
 	while (true){
 		publisher_q_data.topic = (char*)MQTT_PUB_TOPIC_TEMP;
