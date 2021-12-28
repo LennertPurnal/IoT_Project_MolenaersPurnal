@@ -49,11 +49,12 @@
 * Macros
 ********************************************************************************/
 /* SSID of the Wi-Fi Access Point to which the MQTT client connects. */
-#define WIFI_SSID                         "BraChique"
+//#define WIFI_SSID                         "BraChique"
+#define WIFI_SSID							"Purnal 2.4GHz"
 
 /* Passkey of the above mentioned Wi-Fi SSID. */
-#define WIFI_PASSWORD                     "OpgeruimdStaatNetjes2021"
-
+//#define WIFI_PASSWORD                     "OpgeruimdStaatNetjes2021"
+#define WIFI_PASSWORD						"whbd3ux9e7e9n"
 
 /* Security type of the Wi-Fi access point. See 'cy_wcm_security_t' structure
  * in "cy_wcm.h" for more details.

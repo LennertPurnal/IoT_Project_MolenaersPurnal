@@ -270,7 +270,7 @@ C:/devWorks/IoT/IoT_project/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_tls.h \
  source/subscriber_task.h configs/mqtt_client_config.h \
  ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h \
- source/http_methods.h
+ source/http_methods.h source/measurement_methods.h
 
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h:
 
@@ -815,3 +815,5 @@ configs/mqtt_client_config.h:
 ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h:
 
 source/http_methods.h:
+
+source/measurement_methods.h:
