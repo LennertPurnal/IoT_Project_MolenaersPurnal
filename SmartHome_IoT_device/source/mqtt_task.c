@@ -235,13 +235,15 @@ void mqtt_client_task(void *pvParameters)
     	goto exit_cleanup;
     }
 
+
     // create the task for sending the temperature data
-      if (pdPASS != xTaskCreate(output_control_task, "Output control task", (2 * 1024),
-      						NULL, 3, &output_control_task_handle))
+      if (pdPASS != xTaskCreate(output_control_task, "Output control task", (1 * 1024),
+      						NULL, 4, &output_control_task_handle))
       {
       	printf("Failed to create output control task");
       	goto exit_cleanup;
       }
+
 
     print_heap_usage("mqtt_client_task: subscriber & publisher tasks created");
 

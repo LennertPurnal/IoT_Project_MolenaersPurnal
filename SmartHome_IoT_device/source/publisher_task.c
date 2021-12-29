@@ -41,8 +41,7 @@
 * including Cypress's product in a High Risk Product, the manufacturer
 * of such system or application assumes all risk of such use and in doing
 * so agrees to indemnify Cypress against all liability.
-*******************************************************************************/
-
+*****************************************************************************
 #include "cy_pdl.h"
 #include "cyhal.h"
 #include "cybsp.h"

@@ -237,7 +237,6 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_usb_dev.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_wdt.h \
  ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h \
- source/publisher_task.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h \
  configs/FreeRTOSConfig.h \
  libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h \
@@ -246,11 +245,7 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/freertos/release-v10.4.3/Source/include/deprecated_definitions.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/portmacro.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/mpu_wrappers.h \
- ../mtb_shared/freertos/release-v10.4.3/Source/include/task.h \
- ../mtb_shared/freertos/release-v10.4.3/Source/include/list.h \
- ../mtb_shared/freertos/release-v10.4.3/Source/include/queue.h \
- ../mtb_shared/freertos/release-v10.4.3/Source/include/task.h \
- source/mqtt_task.h \
+ configs/mqtt_client_config.h \
  ../mtb_shared/mqtt/release-v3.2.0/include/cy_mqtt_api.h \
  ../mtb_shared/connectivity-utilities/release-v3.0.3/cy_result_mw.h \
  ../mtb_shared/connectivity-utilities/release-v3.0.3/network/cy_nw_helper.h \
@@ -267,8 +262,7 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets.h \
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets_error.h \
  ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets_constants.h \
- ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_tls.h \
- source/subscriber_task.h configs/mqtt_client_config.h
+ ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_tls.h
 libs/TARGET_CY8CPROTO-062-4343W/cybsp.h:
 ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h:
 libs/TARGET_CY8CPROTO-062-4343W/cybsp_types.h:
@@ -507,7 +501,6 @@ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_usb_dev.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_wdt.h:
 ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h:
-source/publisher_task.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h:
 configs/FreeRTOSConfig.h:
 libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h:
@@ -516,11 +509,7 @@ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg
 ../mtb_shared/freertos/release-v10.4.3/Source/include/deprecated_definitions.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/portmacro.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/mpu_wrappers.h:
-../mtb_shared/freertos/release-v10.4.3/Source/include/task.h:
-../mtb_shared/freertos/release-v10.4.3/Source/include/list.h:
-../mtb_shared/freertos/release-v10.4.3/Source/include/queue.h:
-../mtb_shared/freertos/release-v10.4.3/Source/include/task.h:
-source/mqtt_task.h:
+configs/mqtt_client_config.h:
 ../mtb_shared/mqtt/release-v3.2.0/include/cy_mqtt_api.h:
 ../mtb_shared/connectivity-utilities/release-v3.0.3/cy_result_mw.h:
 ../mtb_shared/connectivity-utilities/release-v3.0.3/network/cy_nw_helper.h:
@@ -538,5 +527,3 @@ source/mqtt_task.h:
 ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets_error.h:
 ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_secure_sockets_constants.h:
 ../mtb_shared/secure-sockets/release-v2.3.0/include/cy_tls.h:
-source/subscriber_task.h:
-configs/mqtt_client_config.h:

@@ -7,16 +7,15 @@
 #include "cybsp.h"
 #include "cyhal.h"
 #include "cy_retarget_io.h"
+#include "FreeRTOS.h"
 
-
-/* Task header files */
-#include "publisher_task.h"
-#include "mqtt_task.h"
-#include "subscriber_task.h"
 
 /* Configuration file for MQTT client */
 #include "mqtt_client_config.h"
 
+/* Middleware libraries */
+#include "cy_mqtt_api.h"
+#include "cy_retarget_io.h"
 
 /* PWM Frequency       */
 #define PWM_FREQUENCY (60)
