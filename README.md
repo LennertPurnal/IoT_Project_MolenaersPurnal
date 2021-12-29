@@ -21,4 +21,4 @@ The Psoc6 code is located in the `SmartHome_IoT_device` folder. In modustoolbox 
 ### Temperature sensor
 The used temperature sensor is a breakout board containing the [BMP180 Pressure and Temperature sensor](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf). This module uses I2C to be configured and read. 
 
-the I2C address is 0xEF (read) and 0xEE (write).
+the I2C address is 0x77.
