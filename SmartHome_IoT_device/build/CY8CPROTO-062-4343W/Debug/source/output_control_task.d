@@ -245,6 +245,11 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/freertos/release-v10.4.3/Source/include/deprecated_definitions.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/portmacro.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/mpu_wrappers.h \
+ source/output_control_task.h \
+ ../mtb_shared/freertos/release-v10.4.3/Source/include/task.h \
+ ../mtb_shared/freertos/release-v10.4.3/Source/include/list.h \
+ ../mtb_shared/freertos/release-v10.4.3/Source/include/queue.h \
+ ../mtb_shared/freertos/release-v10.4.3/Source/include/task.h \
  configs/mqtt_client_config.h \
  ../mtb_shared/mqtt/release-v3.2.0/include/cy_mqtt_api.h \
  ../mtb_shared/connectivity-utilities/release-v3.0.3/cy_result_mw.h \
@@ -509,6 +514,11 @@ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg
 ../mtb_shared/freertos/release-v10.4.3/Source/include/deprecated_definitions.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/portmacro.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/mpu_wrappers.h:
+source/output_control_task.h:
+../mtb_shared/freertos/release-v10.4.3/Source/include/task.h:
+../mtb_shared/freertos/release-v10.4.3/Source/include/list.h:
+../mtb_shared/freertos/release-v10.4.3/Source/include/queue.h:
+../mtb_shared/freertos/release-v10.4.3/Source/include/task.h:
 configs/mqtt_client_config.h:
 ../mtb_shared/mqtt/release-v3.2.0/include/cy_mqtt_api.h:
 ../mtb_shared/connectivity-utilities/release-v3.0.3/cy_result_mw.h:

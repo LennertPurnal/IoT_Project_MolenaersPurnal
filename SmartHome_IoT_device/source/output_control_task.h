@@ -46,25 +46,15 @@
 #include "task.h"
 #include "queue.h"
 
-/*******************************************************************************
-* Macros
-********************************************************************************/
-/* Task parameters for Button Task. */
-#define PUBLISHER_TASK_PRIORITY               (2)
-#define PUBLISHER_TASK_STACK_SIZE             (1024 * 2)
-
 
 /*******************************************************************************
 * Extern Variables
 ********************************************************************************/
-extern TaskHandle_t subscriber_task_handle;
 extern TaskHandle_t output_control_task_handle;
-extern QueueHandle_t publisher_task_q;
 
 /*******************************************************************************
 * Function Prototypes
 ********************************************************************************/
-void subscriber_task(void *pvParameters);
 void output_control_task(void *pvParameters);
 
 #endif /* PUBLISHER_TASK_H_ */

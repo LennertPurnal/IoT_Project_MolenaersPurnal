@@ -10,6 +10,9 @@
 #include "FreeRTOS.h"
 
 
+/* Task header files */
+#include "output_control_task.h"
+
 /* Configuration file for MQTT client */
 #include "mqtt_client_config.h"
 

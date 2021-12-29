@@ -1,9 +1,6 @@
 C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343W/Debug/source/publisher_task.o: \
- source/publisher_task.c source/publisher_task.h \
- ../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h \
- configs/FreeRTOSConfig.h \
- ../mtb_shared/core-lib/release-v1.3.0/include/cy_utils.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h \
+ source/publisher_task.c \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_cpuss.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_headers.h \
@@ -66,27 +63,15 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_smif.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_scb.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/gpio_psoc6_02_124_bga.h \
- ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \
- libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h \
- libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_notices.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device_headers.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_systick.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ble_clk.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra_cfg.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h \
- ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_hwmgr.h \
- ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h \
- ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ble_clk.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_canfd.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_common.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device_headers.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h \
+ ../mtb_shared/core-lib/release-v1.3.0/include/cy_utils.h \
+ ../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysint.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_core.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_core_aes.h \
@@ -134,14 +119,21 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_flash.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_gpio.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_i2s.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_drv.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_pipe.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_drv.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_sema.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_lpcomp.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_lvd.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_systick.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ble_clk.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_mcwdt.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pdm_pcm.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra_cfg.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_profile.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_prot.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_rtc.h \
@@ -158,7 +150,9 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_smif_memslot.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_smif.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysanalog.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysint.h \
+ ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_systick.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_tcpwm_counter.h \
@@ -172,18 +166,86 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_trigmux.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_usbfs_dev_drv_reg.h \
  ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_wdt.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_resources.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pin_package.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/pin_packages/cyhal_psoc6_02_124_bga.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_triggers.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/triggers/cyhal_triggers_psoc6_02.h \
  ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/cyhal_deprecated.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_drivers.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_adc.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_gpio.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_gpio_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_utils.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_utils_psoc.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_adc_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_clock.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_clock_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_comp.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_crc.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_crc_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_hwmgr.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_dac.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_dma.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_dma_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_ezi2c.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_flash.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_i2c.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_i2s.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_i2s_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_audio_common.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_interconnect.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_interconnect_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_lptimer.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_opamp.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_pdmpcm.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_syspm.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_syspm_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pdmpcm_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_pwm.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pwm_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_tcpwm_common.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_qspi.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_quaddec.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_quaddec_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_rtc.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_sdhc.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_sdio.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_spi.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_system.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_system_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_tdm.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_tdm_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_timer.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_timer_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_trng.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_trng_impl.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_uart.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_usb_dev.h \
+ ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_wdt.h \
+ libs/TARGET_CY8CPROTO-062-4343W/cybsp.h \
+ libs/TARGET_CY8CPROTO-062-4343W/cybsp_types.h \
+ libs/TARGET_CY8CPROTO-062-4343W/cybsp_doc.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_notices.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_connectivity_bt.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_pins.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_routing.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_clocks.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_peripherals.h \
+ ../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h \
+ configs/FreeRTOSConfig.h \
+ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/projdefs.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/portable.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/deprecated_definitions.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/portmacro.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/mpu_wrappers.h \
+ source/publisher_task.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/task.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/list.h \
  ../mtb_shared/freertos/release-v10.4.3/Source/include/queue.h \
@@ -209,11 +271,7 @@ C:/IOT/IoT_Project_MolenaersPurnal/SmartHome_IoT_device/build/CY8CPROTO-062-4343
  source/subscriber_task.h configs/mqtt_client_config.h \
  ../mtb_shared/retarget-io/release-v1.3.0/cy_retarget_io.h \
  source/http_methods.h source/measurement_methods.h
-source/publisher_task.h:
-../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h:
-configs/FreeRTOSConfig.h:
-../mtb_shared/core-lib/release-v1.3.0/include/cy_utils.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_cpuss.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_headers.h:
@@ -276,27 +334,15 @@ libs/TARGET_CY8CPROTO-062-4343W/system_psoc6.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_smif.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/ip/cyip_scb.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/gpio_psoc6_02_124_bga.h:
-../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h:
-libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h:
-libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_notices.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device_headers.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_systick.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ble_clk.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra_cfg.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h:
-../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_hwmgr.h:
-../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_pdl.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device.h:
-../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ble_clk.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_canfd.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_common.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/devices/COMPONENT_CAT1A/include/cy_device_headers.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h:
+../mtb_shared/core-lib/release-v1.3.0/include/cy_utils.h:
+../mtb_shared/core-lib/release-v1.3.0/include/cy_result.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysint.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_core.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_crypto_core_aes.h:
@@ -344,14 +390,21 @@ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_flash.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_gpio.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_i2s.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_drv.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_pipe.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_drv.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ipc_sema.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_lpcomp.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_lvd.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_systick.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_ble_clk.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_mcwdt.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pdm_pcm.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_pra_cfg.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_profile.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_prot.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_rtc.h:
@@ -368,7 +421,9 @@ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_smif_memslot.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_smif.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysanalog.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysclk.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_sysint.h:
+../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syslib.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_syspm.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_systick.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_tcpwm_counter.h:
@@ -382,18 +437,86 @@ libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_trigmux.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_usbfs_dev_drv_reg.h:
 ../mtb_shared/mtb-pdl-cat1/release-v2.3.1/drivers/include/cy_wdt.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_general_types.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_types.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_hw_resources.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pin_package.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/pin_packages/cyhal_psoc6_02_124_bga.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_triggers.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/triggers/cyhal_triggers_psoc6_02.h:
 ../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/COMPONENT_CAT1A/include/cyhal_deprecated.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_drivers.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_adc.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_gpio.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_gpio_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_utils.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_utils_psoc.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_adc_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_clock.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_clock_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_comp.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_crc.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_crc_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_hwmgr.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_dac.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_dma.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_dma_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_ezi2c.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_flash.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_i2c.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_i2s.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_i2s_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_audio_common.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_interconnect.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_interconnect_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_lptimer.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_opamp.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_pdmpcm.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_syspm.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_syspm_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pdmpcm_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_pwm.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_pwm_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_tcpwm_common.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_qspi.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_quaddec.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_quaddec_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_rtc.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_sdhc.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_sdio.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_spi.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_system.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_system_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_tdm.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_tdm_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_timer.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_timer_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_trng.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/COMPONENT_PSOC6HAL/include/cyhal_trng_impl.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_uart.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_usb_dev.h:
+../mtb_shared/mtb-hal-cat1/release-v1.6.0/include/cyhal_wdt.h:
+libs/TARGET_CY8CPROTO-062-4343W/cybsp.h:
+libs/TARGET_CY8CPROTO-062-4343W/cybsp_types.h:
+libs/TARGET_CY8CPROTO-062-4343W/cybsp_doc.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_notices.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_connectivity_bt.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_pins.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_routing.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_clocks.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_peripherals.h:
+../mtb_shared/freertos/release-v10.4.3/Source/include/FreeRTOS.h:
+configs/FreeRTOSConfig.h:
+libs/TARGET_CY8CPROTO-062-4343W/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource/cycfg_system.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/projdefs.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/portable.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/deprecated_definitions.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/portmacro.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/mpu_wrappers.h:
+source/publisher_task.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/task.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/list.h:
 ../mtb_shared/freertos/release-v10.4.3/Source/include/queue.h:
