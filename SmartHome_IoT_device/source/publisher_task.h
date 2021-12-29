@@ -75,14 +75,14 @@ typedef struct{
 * Extern Variables
 ********************************************************************************/
 extern TaskHandle_t publisher_task_handle;
-extern TaskHandle_t send_temp_task_handle;
+extern TaskHandle_t send_measurement_task_handle;
 extern QueueHandle_t publisher_task_q;
 
 /*******************************************************************************
 * Function Prototypes
 ********************************************************************************/
 void publisher_task(void *pvParameters);
-void send_temp_task(void *pvParameters);
+void send_measurement_task(void *pvParameters);
 
 #endif /* PUBLISHER_TASK_H_ */
 

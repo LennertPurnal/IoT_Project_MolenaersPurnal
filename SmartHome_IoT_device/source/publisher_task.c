@@ -61,6 +61,7 @@
 #include "cy_retarget_io.h"
 
 #include "http_methods.h"
+#include "measurement_methods.h"
 
 #include <time.h>
 
@@ -88,7 +89,7 @@
 *******************************************************************************/
 /* FreeRTOS task handle for this task. */
 TaskHandle_t publisher_task_handle;
-TaskHandle_t send_temp_task_handle;
+TaskHandle_t send_measurement_task_handle;
 
 
 /* Handle of the queue holding the commands for the publisher task */
@@ -108,9 +109,6 @@ cy_mqtt_publish_info_t publish_info =
 /*******************************************************************************
 * Macros
 *******************************************************************************/
-/* Macro for ADC Channel configuration*/
-#define SINGLE_CHANNEL 1
-#define MULTI_CHANNEL  2
 
 /*
  * Macro to choose between single channel and multiple channel configuration of
@@ -122,19 +120,6 @@ cy_mqtt_publish_info_t publish_info =
  * To use multiple channel configuration set ADC_EXAMPLE_MODE macro to MULTI_CHANNEL.
  *
  */
-
-/* Channel 0 input pin */
-#define VPLUS_CHANNEL_0             (P10_0)
-
-
-/* Channel 1 VPLUS input pin */
-#define VPLUS_CHANNEL_1             (P10_1)
-
-/* Channel 1 VREF input pin */
-#define VREF_CHANNEL_1              (P10_2)
-
-/* Number of scans every time ADC read is initiated */
-#define NUM_SCAN                    (1)
 
 
 /*******************************************************************************
@@ -148,25 +133,6 @@ enum ADC_CHANNELS
   NUM_CHANNELS
 } adc_channel;
 
-/*******************************************************************************
-* Global Variables
-*******************************************************************************/
-/* ADC Object */
-cyhal_adc_t adc_obj;
-
-/* ADC Channel 0 Object */
-cyhal_adc_channel_t adc_chan_0_obj;
-
-/* Default ADC configuration */
-const cyhal_adc_config_t adc_config = {
-        .continuous_scanning=false, // Continuous Scanning is disabled
-        .average_count=1,           // Average count disabled
-        .vref=CYHAL_ADC_REF_VDDA,   // VREF for Single ended channel set to VDDA
-        .vneg=CYHAL_ADC_VNEG_VSSA,  // VNEG for Single ended channel set to VSSA
-        .resolution = 12u,          // 12-bit resolution
-        .ext_vref = NC,             // No connection
-        .bypass_pin = NC };       // No connection
-
 
 /******************************************************************************
 * Function Prototypes
@@ -175,9 +141,6 @@ static void publisher_init(void);
 static void publisher_deinit(void);
 static void isr_button_press(void *callback_arg, cyhal_gpio_event_t event);
 void print_heap_usage(char *msg);
-void getPPM(void);
-void adc_single_channel_init(void);
-void adc_single_channel_process(void);
 /******************************************************************************
  * Function Name: publisher_task
  ******************************************************************************
@@ -366,25 +329,26 @@ static void isr_button_press(void *callback_arg, cyhal_gpio_event_t event)
 }
 
 
-void send_temp_task(void *pvParameters){
+void send_measurement_task(void *pvParameters){
 	publisher_data_t publisher_q_data;
 	publisher_q_data.cmd = PUBLISH_MQTT_MSG;
 	const TickType_t xQueueDelay = 1000/portTICK_PERIOD_MS;
-	const TickType_t xDelay = 10000/portTICK_PERIOD_MS; //set delay to 10 seconds
+	const TickType_t xDelay = 5000/portTICK_PERIOD_MS; //set delay to 5 seconds
 
 	uint32_t last_unix_time = 0, last_get_time = 0, time_since_update = 0, timestamp = 0;
 	int device_id = 2;
-	char *jsonstring = (char*)malloc(80*sizeof(char));
-	srand(time(0));
+	float temperature = 0, ppm = 0;
+	char *jsonstring = (char*)malloc(100*sizeof(char));
+
+	adc_single_channel_init();
+	temperature_i2c_init();
 
 	while (true){
 		publisher_q_data.topic = (char*)MQTT_PUB_TOPIC_TEMP;
 
 		vTaskDelay(xDelay);
-		float temperature = rand() % (25-22) + 21; //random number for temp for testing purposes
-
-		getPPM();
-
+		temperature = getTemperature();
+		ppm = getPPM();
 
 		// synchronize with unix time from internet on start or if time since last update is more than 5 minutes
 		while ((last_unix_time == 0) || (time_since_update > 300)){
@@ -395,59 +359,11 @@ void send_temp_task(void *pvParameters){
 		time_since_update = time(NULL) - last_get_time;
 		timestamp = last_unix_time + time_since_update;
 
-		sprintf(jsonstring ,"{\"device_id\":%d ,\"temperature\":%f ,\"timestamp\":%lu}" ,device_id ,temperature ,timestamp);
+		sprintf(jsonstring ,"{\"device_id\":%d ,\"temperature\":%f, \"ppm\":%f,\"timestamp\":%lu}" , device_id, temperature, ppm, timestamp);
 		publisher_q_data.data = jsonstring;
 
 		xQueueSend(publisher_task_q, &publisher_q_data, xQueueDelay);
 	}
-}
-
-
-void getPPM(){
-	 adc_single_channel_process();
-}
-
-
-void adc_single_channel_init(void)
-{
-    /* Variable to capture return value of functions */
-    cy_rslt_t result;
-
-    /* Initialize ADC. The ADC block which can connect to pin 10[0] is selected */
-    result = cyhal_adc_init(&adc_obj, VPLUS_CHANNEL_0, NULL);
-    if(result != CY_RSLT_SUCCESS)
-    {
-        printf("ADC initialization failed. Error: %ld\n", (long unsigned int)result);
-        CY_ASSERT(0);
-    }
-
-    /* ADC channel configuration */
-    const cyhal_adc_channel_config_t channel_config = {
-            .enable_averaging = false,  // Disable averaging for channel
-            .min_acquisition_ns = 1000, // Minimum acquisition time set to 1us
-            .enabled = true };          // Sample this channel when ADC performs a scan
-
-    /* Initialize a channel 0 and configure it to scan P10_0 in single ended mode. */
-    result  = cyhal_adc_channel_init_diff(&adc_chan_0_obj, &adc_obj, VPLUS_CHANNEL_0,
-                                          CYHAL_ADC_VNEG, &channel_config);
-    if(result != CY_RSLT_SUCCESS)
-    {
-        printf("ADC single ended channel initialization failed. Error: %ld\n", (long unsigned int)result);
-        CY_ASSERT(0);
-    }
-
-    printf("ADC is configured in single channel configuration\r\n\n");
-    printf("Provide input voltage at pin P10_0. \r\n\n");
-}
-
-void adc_single_channel_process(void)
-{
-    /* Variable to store ADC conversion result from channel 0 */
-    int32_t adc_result_0 = 0;
-
-    /* Read input voltage, convert it to millivolts and print input voltage */
-    adc_result_0 = cyhal_adc_read_uv(&adc_chan_0_obj)/1000;
-    printf("Channel 0 input: %4ldmV\r\n", (long int)adc_result_0);
 }
 
 /* [] END OF FILE */

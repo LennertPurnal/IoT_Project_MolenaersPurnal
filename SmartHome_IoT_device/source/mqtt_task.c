@@ -55,6 +55,7 @@
 #include "mqtt_task.h"
 #include "subscriber_task.h"
 #include "publisher_task.h"
+#include "output_control_task.h"
 
 /* Configuration file for Wi-Fi and MQTT client */
 #include "wifi_config.h"
@@ -227,12 +228,20 @@ void mqtt_client_task(void *pvParameters)
     }
 
     // create the task for sending the temperature data
-    if (pdPASS != xTaskCreate(send_temp_task, "temperature send task", (5 * 1024),
-    						NULL, 3, &send_temp_task_handle))
+    if (pdPASS != xTaskCreate(send_measurement_task, "measurement send task", (5 * 1024),
+    						NULL, 3, &send_measurement_task_handle))
     {
     	printf("Failed to create the temperature sending task");
     	goto exit_cleanup;
     }
+
+    // create the task for sending the temperature data
+      if (pdPASS != xTaskCreate(output_control_task, "Output control task", (2 * 1024),
+      						NULL, 3, &output_control_task_handle))
+      {
+      	printf("Failed to create output control task");
+      	goto exit_cleanup;
+      }
 
     print_heap_usage("mqtt_client_task: subscriber & publisher tasks created");
 
@@ -323,9 +332,9 @@ void mqtt_client_task(void *pvParameters)
     {
         vTaskDelete(publisher_task_handle);
     }
-    if (send_temp_task_handle != NULL)
+    if (send_measurement_task_handle != NULL)
     {
-    	vTaskDelete(send_temp_task_handle);
+    	vTaskDelete(send_measurement_task_handle);
     }
     cleanup();
     printf("\nCleanup Done\nTerminating the MQTT task...\n\n");
