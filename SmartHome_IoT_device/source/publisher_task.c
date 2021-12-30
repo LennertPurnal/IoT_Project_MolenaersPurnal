@@ -357,7 +357,7 @@ void send_measurement_task(void *pvParameters){
 	action_status_q = xQueueCreate((3u), sizeof(action_status_t));
 
 	while (true){
-		if (pdTRUE == xQueueReceive(action_status_q, &action_status, xQueueDelay))
+		if (pdTRUE == xQueueReceive(action_status_q, &action_status, portMAX_DELAY))
 		{
 			//on status change: set new status
 			switch (action_status){

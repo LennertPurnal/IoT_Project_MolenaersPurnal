@@ -65,6 +65,7 @@ void output_control_task(void  *pvParameters)
 {
     /* PWM object */
     cyhal_pwm_t pwm_ventilator_control;
+    cyhal_pwm_t pwm_radiator_control;
     /* API return code */
     cy_rslt_t result;
 
@@ -82,16 +83,35 @@ void output_control_task(void  *pvParameters)
         printf("API cyhal_pwm_init failed with error code: %lu\r\n", (unsigned long) result);
         CY_ASSERT(false);
     }
+
+    result = cyhal_pwm_init(&pwm_radiator_control, P10_2, NULL);
+      if(CY_RSLT_SUCCESS != result)
+      {
+          printf("API cyhal_pwm_init failed with error code: %lu\r\n", (unsigned long) result);
+          CY_ASSERT(false);
+      }
+
     /* Set the PWM output frequency and duty cycle */
     result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
     if(CY_RSLT_SUCCESS != result)
 	handle_pwm_error(result);
+    result = cyhal_pwm_set_duty_cycle(&pwm_radiator_control, 0, PWM_FREQUENCY);
+      if(CY_RSLT_SUCCESS != result)
+  	handle_pwm_error(result);
+
+
     /* Start the PWM */
     result = cyhal_pwm_start(&pwm_ventilator_control);
     if(CY_RSLT_SUCCESS != result)
     {
         printf("API cyhal_pwm_start failed with error code: %lu\r\n", (unsigned long) result);
         CY_ASSERT(false);
+    }
+    result = cyhal_pwm_start(&pwm_radiator_control);
+    if(CY_RSLT_SUCCESS != result)
+    {
+	   printf("API cyhal_pwm_start failed with error code: %lu\r\n", (unsigned long) result);
+	   CY_ASSERT(false);
     }
 
     output_control_task_q = xQueueCreate((5u), sizeof(output_control_data_t));
@@ -127,10 +147,18 @@ void output_control_task(void  *pvParameters)
 						// if temperature is too high: turn on fan (cooling)
 						result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, PWM_DUTY_CYCLE, PWM_FREQUENCY);
 						handle_pwm_error(result);
+						//TODO zet verwarming uit
+						result = cyhal_pwm_set_duty_cycle(&pwm_radiator_control, 0, PWM_FREQUENCY);
+						handle_pwm_error(result);
 						action_status = COOLING;
 					}
+					// else if (temperature < (set_temperature - 1)) { zet verwarming aan en ventilator uit }
+					// EN! action_status = HEATING;
 					else {
 						result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
+						handle_pwm_error(result);
+						//TODO zet verwarming aan
+						result = cyhal_pwm_set_duty_cycle(&pwm_radiator_control, PWM_DUTY_CYCLE, PWM_FREQUENCY);
 						handle_pwm_error(result);
 						action_status = INACTIVE;
 					}
@@ -138,12 +166,16 @@ void output_control_task(void  *pvParameters)
 				else if (prevControl != control){
 					result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
 					handle_pwm_error(result);
+					//TODO zet verwarming uit
+					result = cyhal_pwm_set_duty_cycle(&pwm_radiator_control, 0, PWM_FREQUENCY);
+					handle_pwm_error(result);
 					action_status = INACTIVE;
 				}
 				//if control is of, and was off earlier: do nothing
+				xQueueSend(action_status_q, &action_status, portMAX_DELAY);
 			}
 			prevControl = control;
-			xQueueSend(action_status_q, &action_status, 1000/portTICK_PERIOD_MS);
+
 		}
     }
 }
