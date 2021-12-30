@@ -36,7 +36,7 @@ const cyhal_adc_config_t adc_config = {
 long int adc_single_channel_process(void);
 
 float getPPM(){
-	 return (float)adc_single_channel_process();
+	 return (float)adc_single_channel_process()/2;
 }
 
 void adc_single_channel_init(void)

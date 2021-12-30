@@ -54,8 +54,8 @@
 /* MQTT Broker/Server address and port used for the MQTT connection. */
 #define MQTT_BROKER_ADDRESS               "432bc48eb5e64d089e08dfb55fe4f305.s1.eu.hivemq.cloud"
 #define MQTT_PORT                         8883
-#define DEVICE_ID						  2
-#define MQTT_SUB_TOPIC                    "devices/2"
+#define DEVICE_ID						  1
+#define MQTT_SUB_TOPIC                    "devices/1"
 
 
 /* Set this macro to 1 if a secure (TLS) connection to the MQTT Broker is  
