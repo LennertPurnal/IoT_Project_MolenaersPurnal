@@ -55,6 +55,8 @@
 #define MQTT_BROKER_ADDRESS               "432bc48eb5e64d089e08dfb55fe4f305.s1.eu.hivemq.cloud"
 #define MQTT_PORT                         8883
 #define DEVICE_ID						  2
+#define MQTT_SUB_TOPIC                    "devices/2"
+
 
 /* Set this macro to 1 if a secure (TLS) connection to the MQTT Broker is  
  * required to be established, else 0.
@@ -70,7 +72,7 @@
 #define MQTT_PUB_TOPIC_BTN                "ledstatus"	//topic for button press
 #define MQTT_PUB_TOPIC_WAKEUP			  "wakeup"
 #define MQTT_PUB_TOPIC_TEMP				  "measurements" //topic for temperature sending
-#define MQTT_SUB_TOPIC                    "devices/2"
+
 
 /* Set the QoS that is associated with the MQTT publish, and subscribe messages.
  * Valid choices are 0, 1, and 2. Other values should not be used in this macro.
