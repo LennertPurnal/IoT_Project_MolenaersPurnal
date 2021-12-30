@@ -71,12 +71,24 @@ typedef struct{
     char *topic;
 } publisher_data_t;
 
+typedef enum
+{
+	INACTIVE,
+	HEATING,
+	COOLING
+} action_status_t;
+
+#define INACTIVE_MESSAGE "inactiv"
+#define HEATING_MESSAGE "heating"
+#define COOLING_MESSAGE "cooling"
+
 /*******************************************************************************
 * Extern Variables
 ********************************************************************************/
 extern TaskHandle_t publisher_task_handle;
 extern TaskHandle_t send_measurement_task_handle;
 extern QueueHandle_t publisher_task_q;
+extern QueueHandle_t action_status_q;
 
 /*******************************************************************************
 * Function Prototypes

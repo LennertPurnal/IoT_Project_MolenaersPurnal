@@ -52,7 +52,7 @@
 ********************************************************************************/
 /* Task parameters for MQTT Client Task. */
 #define MQTT_CLIENT_TASK_PRIORITY       (2)
-#define MQTT_CLIENT_TASK_STACK_SIZE     (1024 * 2)
+#define MQTT_CLIENT_TASK_STACK_SIZE     (1024 * 3)
 
 /*******************************************************************************
 * Global Variables

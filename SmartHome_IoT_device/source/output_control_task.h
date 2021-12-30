@@ -46,11 +46,26 @@
 #include "task.h"
 #include "queue.h"
 
+/*
+ * enum to set what data is sent
+ */
+typedef enum{
+	CURRENT_TEMP,
+	CONTROL,
+	SET_TEMP
+} output_control_unit;
+
+//data struct with unit type and value as float to be sent in queue
+typedef struct{
+    output_control_unit unit;
+    float data;
+} output_control_data_t;
 
 /*******************************************************************************
 * Extern Variables
 ********************************************************************************/
 extern TaskHandle_t output_control_task_handle;
+extern QueueHandle_t output_control_task_q;
 
 /*******************************************************************************
 * Function Prototypes

@@ -46,6 +46,8 @@
 #include "cybsp.h"
 #include "string.h"
 #include "FreeRTOS.h"
+#include <string.h>
+#include <stdlib.h>
 
 /* Task header files */
 #include "subscriber_task.h"
@@ -57,6 +59,8 @@
 /* Middleware libraries */
 #include "cy_mqtt_api.h"
 #include "cy_retarget_io.h"
+
+#include "output_control_task.h"
 
 /******************************************************************************
 * Macros
@@ -244,6 +248,9 @@ void mqtt_subscription_callback(cy_mqtt_publish_info_t *received_msg_info)
     const char *received_msg = received_msg_info->payload;
     int received_msg_len = received_msg_info->payload_len;
 
+    /* output_control task data	*/
+    output_control_data_t output_control_q_data;
+
     /* Data to be sent to the subscriber task queue. */
     subscriber_data_t subscriber_q_data;
 
@@ -259,6 +266,7 @@ void mqtt_subscription_callback(cy_mqtt_publish_info_t *received_msg_info)
     subscriber_q_data.cmd = UPDATE_DEVICE_STATE;
 
     /* Assign the device state depending on the received MQTT message. */
+    /*
     if ((strlen(MQTT_DEVICE_ON_MESSAGE) == received_msg_len) &&
         (strncmp(MQTT_DEVICE_ON_MESSAGE, received_msg, received_msg_len) == 0))
     {
@@ -269,16 +277,42 @@ void mqtt_subscription_callback(cy_mqtt_publish_info_t *received_msg_info)
     {
         subscriber_q_data.data = DEVICE_OFF_STATE;
     }
+    */
+
+
+	if (0 == strncmp(MQTT_DEVICE_CONTROL_MESSAGE, received_msg, strlen(MQTT_DEVICE_CONTROL_MESSAGE))){
+		char control_str[2];
+		control_str[0] = received_msg[strlen(MQTT_DEVICE_CONTROL_MESSAGE)];
+		control_str[1] = '\0';
+		//printf("control_str = %s\r\n", control_str);
+		float control = strtof(control_str, NULL);
+
+		output_control_q_data.unit = CONTROL;
+		output_control_q_data.data = control; //the 10th char of the message is the value for control
+    	xQueueSend(output_control_task_q, &output_control_q_data, portMAX_DELAY);
+    }
+	else if (0 == strncmp(MQTT_DEVICE_SETTEMP_MESSAGE, received_msg, strlen(MQTT_DEVICE_SETTEMP_MESSAGE))){
+		char set_temp_str[3];
+		strncpy(set_temp_str, &received_msg[strlen(MQTT_DEVICE_SETTEMP_MESSAGE)], 2);
+		set_temp_str[2] = '\0';
+		//printf("set_temp_str = %s\r\n", set_temp_str);
+		float set_temp = strtof(set_temp_str, NULL);
+
+		output_control_q_data.unit = SET_TEMP;
+		output_control_q_data.data = set_temp;
+		xQueueSend(output_control_task_q, &output_control_q_data, portMAX_DELAY);
+	}
     else
     {
         printf("  Subscriber: Received MQTT message not in valid format!\n");
         return;
     }
 
+
     print_heap_usage("MQTT subscription callback");
 
     /* Send the command and data to subscriber task queue */
-    xQueueSend(subscriber_task_q, &subscriber_q_data, portMAX_DELAY);
+    //xQueueSend(subscriber_task_q, &subscriber_q_data, portMAX_DELAY);
 }
 
 /******************************************************************************

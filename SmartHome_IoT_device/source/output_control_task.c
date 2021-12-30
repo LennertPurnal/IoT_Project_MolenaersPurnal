@@ -12,6 +12,7 @@
 
 /* Task header files */
 #include "output_control_task.h"
+#include "publisher_task.h"
 
 /* Configuration file for MQTT client */
 #include "mqtt_client_config.h"
@@ -33,6 +34,16 @@
 /* FreeRTOS task handle for this task. */
 TaskHandle_t output_control_task_handle;
 
+QueueHandle_t output_control_task_q;
+
+
+void handle_pwm_error(cy_rslt_t result){
+	if(CY_RSLT_SUCCESS != result)
+	{
+		printf("API cyhal_pwm_set_duty_cycle failed with error code: %lu\r\n", (unsigned long) result);
+		CY_ASSERT(false);
+	}
+}
 
 
 /*******************************************************************************
@@ -49,6 +60,7 @@ TaskHandle_t output_control_task_handle;
 *  int
 *
 *******************************************************************************/
+
 void output_control_task(void  *pvParameters)
 {
     /* PWM object */
@@ -56,10 +68,12 @@ void output_control_task(void  *pvParameters)
     /* API return code */
     cy_rslt_t result;
 
+    output_control_data_t output_control_q_data;
+    action_status_t action_status = INACTIVE; //start status is inactive
 
-    /* Enable global interrupts */
-    __enable_irq();
-
+    //initialize the variables, as 1000 are unrealistic values, these indicate unitialized variables
+    //control is encoded as: 0 is OFF, 1 is ON
+    float temperature = 1000, control = 0, set_temperature = 1000, prevControl=0;
 
     /* Initialize the PWM */
     result = cyhal_pwm_init(&pwm_ventilator_control, P10_1, NULL);
@@ -69,12 +83,9 @@ void output_control_task(void  *pvParameters)
         CY_ASSERT(false);
     }
     /* Set the PWM output frequency and duty cycle */
-    result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, PWM_DUTY_CYCLE, PWM_FREQUENCY);
+    result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
     if(CY_RSLT_SUCCESS != result)
-    {
-        printf("API cyhal_pwm_set_duty_cycle failed with error code: %lu\r\n", (unsigned long) result);
-        CY_ASSERT(false);
-    }
+	handle_pwm_error(result);
     /* Start the PWM */
     result = cyhal_pwm_start(&pwm_ventilator_control);
     if(CY_RSLT_SUCCESS != result)
@@ -83,7 +94,57 @@ void output_control_task(void  *pvParameters)
         CY_ASSERT(false);
     }
 
+    output_control_task_q = xQueueCreate((5u), sizeof(output_control_data_t));
+    //vTaskDelete(NULL);
     while(true){
-
+    	if (pdTRUE == xQueueReceive(output_control_task_q, &output_control_q_data, portMAX_DELAY))
+		{
+    		switch (output_control_q_data.unit){
+				case CURRENT_TEMP:
+				{
+					temperature = output_control_q_data.data;
+					printf("Received current temperature through queue = %f\r\n", temperature);
+					break;
+				}
+				case CONTROL:
+				{
+					control = output_control_q_data.data;
+					printf("Received control through queue = %f\r\n", control);
+					break;
+				}
+				case SET_TEMP:
+				{
+					set_temperature = output_control_q_data.data;
+					printf("Received set_temperature through queue = %f\r\n", set_temperature);
+					break;
+				}
+    		}
+    		//when change of settings or temp happens: re-evaluate and set control measures and send status change
+    		if (temperature != 1000 && control != 1000 && set_temperature != 1000){
+				//This is executed when all variables are set
+				if(control == 1){
+					if (temperature > (set_temperature + 1)){
+						// if temperature is too high: turn on fan (cooling)
+						result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, PWM_DUTY_CYCLE, PWM_FREQUENCY);
+						handle_pwm_error(result);
+						action_status = COOLING;
+					}
+					else {
+						result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
+						handle_pwm_error(result);
+						action_status = INACTIVE;
+					}
+				}
+				else if (prevControl != control){
+					result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
+					handle_pwm_error(result);
+					action_status = INACTIVE;
+				}
+				//if control is of, and was off earlier: do nothing
+			}
+			prevControl = control;
+			xQueueSend(action_status_q, &action_status, 1000/portTICK_PERIOD_MS);
+		}
     }
 }
+

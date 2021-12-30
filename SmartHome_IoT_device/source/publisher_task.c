@@ -62,6 +62,7 @@
 
 #include "http_methods.h"
 #include "measurement_methods.h"
+#include "output_control_task.h"
 
 #include <time.h>
 
@@ -94,6 +95,8 @@ TaskHandle_t send_measurement_task_handle;
 
 /* Handle of the queue holding the commands for the publisher task */
 QueueHandle_t publisher_task_q;
+
+QueueHandle_t action_status_q;
 
 /* Structure to store publish message information. */
 cy_mqtt_publish_info_t publish_info =
@@ -141,6 +144,7 @@ static void publisher_init(void);
 static void publisher_deinit(void);
 static void isr_button_press(void *callback_arg, cyhal_gpio_event_t event);
 void print_heap_usage(char *msg);
+void signal_wakeup();
 /******************************************************************************
  * Function Name: publisher_task
  ******************************************************************************
@@ -332,18 +336,42 @@ static void isr_button_press(void *callback_arg, cyhal_gpio_event_t event)
 void send_measurement_task(void *pvParameters){
 	publisher_data_t publisher_q_data;
 	publisher_q_data.cmd = PUBLISH_MQTT_MSG;
+	output_control_data_t output_control_q_data;
+	output_control_q_data.unit = CURRENT_TEMP;
 	const TickType_t xQueueDelay = 1000/portTICK_PERIOD_MS;
 	const TickType_t xDelay = 5000/portTICK_PERIOD_MS; //set delay to 5 seconds
 
+	//initialize device status to inactive
+	action_status_t action_status = INACTIVE;
+	char action_status_msg[8] = INACTIVE_MESSAGE;
+
 	uint32_t last_unix_time = 0, last_get_time = 0, time_since_update = 0, timestamp = 0;
-	int device_id = 2;
+	int device_id = DEVICE_ID;
 	float temperature = 0, ppm = 0;
-	char *jsonstring = (char*)malloc(100*sizeof(char));
+	char *jsonstring = (char*)malloc(130*sizeof(char));
 
 	adc_single_channel_init();
 	temperature_i2c_init();
+	signal_wakeup();
+
+	action_status_q = xQueueCreate((3u), sizeof(action_status_t));
 
 	while (true){
+		if (pdTRUE == xQueueReceive(action_status_q, &action_status, xQueueDelay))
+		{
+			//on status change: set new status
+			switch (action_status){
+				case INACTIVE:
+					strcpy(action_status_msg, INACTIVE_MESSAGE);
+					break;
+				case HEATING:
+					strcpy(action_status_msg, HEATING_MESSAGE);
+					break;
+				case COOLING:
+					strcpy(action_status_msg, COOLING_MESSAGE);
+					break;
+			}
+		}
 		publisher_q_data.topic = (char*)MQTT_PUB_TOPIC_TEMP;
 
 		vTaskDelay(xDelay);
@@ -359,11 +387,32 @@ void send_measurement_task(void *pvParameters){
 		time_since_update = time(NULL) - last_get_time;
 		timestamp = last_unix_time + time_since_update;
 
-		sprintf(jsonstring ,"{\"device_id\":%d ,\"temperature\":%f, \"ppm\":%f,\"timestamp\":%lu}" , device_id, temperature, ppm, timestamp);
+		sprintf(jsonstring ,"{\"device_id\":%d ,\"temperature\":%f, \"ppm\":%f,\"timestamp\":%lu, \"action\":\"%s\"}" , device_id, temperature, ppm, timestamp, action_status_msg);
 		publisher_q_data.data = jsonstring;
+		output_control_q_data.data = temperature;
 
 		xQueueSend(publisher_task_q, &publisher_q_data, xQueueDelay);
+		xQueueSend(output_control_task_q, &output_control_q_data, xQueueDelay);
 	}
+}
+
+/*
+ * function to signal the server that the device has woken up
+ * the server must then return the control and set_temperature settings
+ * this is returned to topic devices/{device_id}
+ */
+void signal_wakeup(){
+	const TickType_t xQueueDelay = 1000/portTICK_PERIOD_MS;
+	publisher_data_t publisher_q_data;
+	publisher_q_data.cmd = PUBLISH_MQTT_MSG;
+	publisher_q_data.topic = MQTT_PUB_TOPIC_WAKEUP;
+
+	char* device_id_str = malloc(5*sizeof(char));
+	sprintf(device_id_str, "%i", DEVICE_ID);
+	publisher_q_data.data = device_id_str;
+
+	xQueueSend(publisher_task_q, &publisher_q_data, xQueueDelay);
+	free(device_id_str);
 }
 
 /* [] END OF FILE */

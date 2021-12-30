@@ -44,6 +44,7 @@
 #define MQTT_CLIENT_CONFIG_H_
 
 #include "cy_mqtt_api.h"
+#include "stdio.h"
 
 /*******************************************************************************
 * Macros
@@ -53,6 +54,7 @@
 /* MQTT Broker/Server address and port used for the MQTT connection. */
 #define MQTT_BROKER_ADDRESS               "432bc48eb5e64d089e08dfb55fe4f305.s1.eu.hivemq.cloud"
 #define MQTT_PORT                         8883
+#define DEVICE_ID						  2
 
 /* Set this macro to 1 if a secure (TLS) connection to the MQTT Broker is  
  * required to be established, else 0.
@@ -63,12 +65,12 @@
 #define MQTT_USERNAME                     "testDevice"
 #define MQTT_PASSWORD                     "hsuRqT2eyJGghy9"
 
-
 /********************* MQTT MESSAGE CONFIGURATION MACROS **********************/
 /* The MQTT topics to be used by the publisher and subscriber. */
 #define MQTT_PUB_TOPIC_BTN                "ledstatus"	//topic for button press
+#define MQTT_PUB_TOPIC_WAKEUP			  "wakeup"
 #define MQTT_PUB_TOPIC_TEMP				  "measurements" //topic for temperature sending
-#define MQTT_SUB_TOPIC                    "ledstatus"
+#define MQTT_SUB_TOPIC                    "devices/2"
 
 /* Set the QoS that is associated with the MQTT publish, and subscribe messages.
  * Valid choices are 0, 1, and 2. Other values should not be used in this macro.
@@ -95,7 +97,8 @@
  */
 #define MQTT_DEVICE_ON_MESSAGE            "TURN ON"
 #define MQTT_DEVICE_OFF_MESSAGE           "TURN OFF"
-
+#define MQTT_DEVICE_CONTROL_MESSAGE		  "control = "
+#define MQTT_DEVICE_SETTEMP_MESSAGE		  "setTemp = "
 
 /******************* OTHER MQTT CLIENT CONFIGURATION MACROS *******************/
 /* A unique client identifier to be used for every MQTT connection. */
