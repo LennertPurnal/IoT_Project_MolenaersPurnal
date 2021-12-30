@@ -126,24 +126,30 @@ void output_control_task(void  *pvParameters)
 					if (temperature > (set_temperature + 1)){
 						// if temperature is too high: turn on fan (cooling)
 						result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, PWM_DUTY_CYCLE, PWM_FREQUENCY);
+						//TODO zet verwarming uit
 						handle_pwm_error(result);
 						action_status = COOLING;
 					}
+					// else if (temperature < (set_temperature - 1)) { zet verwarming aan en ventilator uit }
+					// EN! action_status = HEATING;
 					else {
 						result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
+						//TODO zet verwarming uit
 						handle_pwm_error(result);
 						action_status = INACTIVE;
 					}
 				}
 				else if (prevControl != control){
 					result = cyhal_pwm_set_duty_cycle(&pwm_ventilator_control, 0, PWM_FREQUENCY);
+					//TODO zet verwarming uit
 					handle_pwm_error(result);
 					action_status = INACTIVE;
 				}
 				//if control is of, and was off earlier: do nothing
+				xQueueSend(action_status_q, &action_status, portMAX_DELAY);
 			}
 			prevControl = control;
-			xQueueSend(action_status_q, &action_status, 1000/portTICK_PERIOD_MS);
+
 		}
     }
 }
