@@ -354,10 +354,10 @@ void send_measurement_task(void *pvParameters){
 	temperature_i2c_init();
 	signal_wakeup();
 
-	action_status_q = xQueueCreate((3u), sizeof(action_status_t));
+	action_status_q = xQueueCreate((1u), sizeof(action_status_t));
 
 	while (true){
-		if (pdTRUE == xQueueReceive(action_status_q, &action_status, portMAX_DELAY))
+		if (pdTRUE == xQueueReceive(action_status_q, &action_status, xQueueDelay))
 		{
 			//on status change: set new status
 			switch (action_status){
@@ -409,10 +409,11 @@ void signal_wakeup(){
 
 	char* device_id_str = malloc(5*sizeof(char));
 	sprintf(device_id_str, "%i", DEVICE_ID);
+	printf("device_id_str to be sent is %s", device_id_str);
 	publisher_q_data.data = device_id_str;
 
 	xQueueSend(publisher_task_q, &publisher_q_data, xQueueDelay);
-	free(device_id_str);
+	//free(device_id_str);
 }
 
 /* [] END OF FILE */
