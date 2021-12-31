@@ -357,6 +357,8 @@ void send_measurement_task(void *pvParameters){
 	action_status_q = xQueueCreate((1u), sizeof(action_status_t));
 
 	while (true){
+		vTaskDelay(xDelay);
+
 		if (pdTRUE == xQueueReceive(action_status_q, &action_status, xQueueDelay))
 		{
 			//on status change: set new status
@@ -374,7 +376,6 @@ void send_measurement_task(void *pvParameters){
 		}
 		publisher_q_data.topic = (char*)MQTT_PUB_TOPIC_TEMP;
 
-		vTaskDelay(xDelay);
 		temperature = getTemperature();
 		ppm = getPPM();
 

@@ -132,8 +132,8 @@ void subscriber_task(void *pvParameters)
     (void) pvParameters;
 
     /* Initialize the User LED. */
-    cyhal_gpio_init(CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_PULLUP,
-                    CYBSP_LED_STATE_OFF);
+    //cyhal_gpio_init(CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_PULLUP,
+    //                CYBSP_LED_STATE_OFF);
 
     /* Subscribe to the specified MQTT topic. */
     subscribe_to_topic();
@@ -163,10 +163,10 @@ void subscriber_task(void *pvParameters)
                 case UPDATE_DEVICE_STATE:
                 {
                     /* Update the LED state as per received notification. */
-                    cyhal_gpio_write(CYBSP_USER_LED, subscriber_q_data.data);
+                    //cyhal_gpio_write(CYBSP_USER_LED, subscriber_q_data.data);
 
                     /* Update the current device state extern variable. */
-                    current_device_state = subscriber_q_data.data;
+                    //current_device_state = subscriber_q_data.data;
 
                     print_heap_usage("subscriber_task: After updating LED state");
                     break;
